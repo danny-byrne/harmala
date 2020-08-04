@@ -1,64 +1,82 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Album from './Album';
 
-const albums = [
+const bandcampURLs = [
   {
     link: "http://harmala.bandcamp.com/album/selections-i",
     id: 1125684420,
-    text: "Selections I by Harmala (Danny Byrne)"
+    text: "Selections I"
   },
   {
     link:"http://harmala.bandcamp.com/album/improvisations-i",
     id: 1970157443,
-    text: "Improvisations I by Harmala (Danny Byrne)"
+    text: "Improvisations I"
   },
   {
     link: "http://harmala.bandcamp.com/album/improvisations-ii",
     id: 3849103466,
-    text: "Improvisations II by Harmala (Danny Byrne)"
+    text: "Improvisations II"
   },
   {
     link: "http://harmala.bandcamp.com/album/improvisations-iii",
     id: 1936736121,
-    text: "Improvisations III by Harmala (Danny Byrne)"
+    text: "Improvisations III"
   },
   {
     link: "http://harmala.bandcamp.com/album/improvisations-iv",
     id: 1663168831,
-    text: "Improvisations IV by Harmala (Danny Byrne)"
+    text: "Improvisations IV"
   },
   {
     link: "http://harmala.bandcamp.com/album/improvisations-v",
     id: 4290124329,
-    text: "Improvisations V by Harmala (Danny Byrne)"
+    text: "Improvisations V"
   }  
 ]
 
-const createSrc = (id) => {
-  return `https://bandcamp.com/EmbeddedPlayer/album=${id}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/`
-}
-
-function Album(props){
-  let { link, id, text } = props.e;
+function Button(props){
   return (
-    <div>
-      {/* <h3>{text}</h3> */}
-      <iframe title={id} style={{border: "0", width: "350px", height: "470px"}} 
-              src={createSrc(id)} seamless>
-                <a href={link}>{text}
-                </a>
-      </iframe>
-    </div>
+    <>
+      <div key={props.title} className="AlbumNavButton" onClick={() => props.setView(props.title)}>{props.title}</div>
+    </>
   )
 }
 
+function Navbar(props){
+  return (
+    <>
+      {props.albums.map((title) => {
+        return <Button title={title} setView={props.setView} />
+      })}
+    </>
+  )
+}
 
 export default function Listen() {
+  const [view, setView] = useState(bandcampURLs[0].text)
+  console.log('view is now', view)
+  const albums = bandcampURLs.map((e => {
+    return e.text
+  }))
+  console.log(albums)
+  const findCurAlbum = () =>{
+    for(let e of bandcampURLs){
+      if(e.text === view){
+        return e;
+      }
+    }
+  }
+  let curAlbum = findCurAlbum();
+  console.log(curAlbum)
+  //function to find index of curAlbum based on vie
+    //find indexOf view in albums
+    //return Album with object passed in as props for render
+  
   return (
-    <div>
-      Albums
-      {albums.map((e) => {
-        return <Album e={e} />
-      })}
+    <div className="Listen">
+      <div>Albums</div>
+      <Navbar albums={albums} setView={setView}/>
+      <Album curAlbum={curAlbum}/>
     </div>
   )
 }

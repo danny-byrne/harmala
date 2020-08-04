@@ -20,7 +20,11 @@ $navMargin: 10rem;
 }
 
 #content {
-  display: flex;
+  width: 100vw;
+  background-color: red;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 h3 {
@@ -29,3 +33,18 @@ h3 {
   margin-right: $navMargin;
 }
 
+.Listen {
+  width: 100vw;
+  height: 50vh;
+  background-color: green;
+  display: block;
+}
+
+.AlbumNavButton{
+  border: 1px solid black;
+  background-color: red;
+  margin: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+}
