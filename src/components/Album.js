@@ -8,9 +8,9 @@ export default function Album(props){
 
   let { link, id, text } = props.curAlbum;
   return (
-    <div>
-      <h3>{text} by Harmala (Danny Byrne)</h3>
-      <iframe title={id} style={{border: "0", width: "350px", height: "470px"}} 
+    <div className="AlbumView">
+      {/* <h3 style={{textAlign:"center"}}>{text} by Harmala (Danny Byrne)</h3> */}
+      <iframe title={id} style={{border: "0", width: "350px", height: "470px", display: "inline-block"}} 
               src={createSrc(id)} seamless>
                 <a href={link}>{text}
                 </a>

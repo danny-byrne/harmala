@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Album from './Album';
 
+
 const bandcampURLs = [
   {
     link: "http://harmala.bandcamp.com/album/selections-i",
@@ -54,11 +55,11 @@ function Navbar(props){
 
 export default function Listen() {
   const [view, setView] = useState(bandcampURLs[0].text)
-  console.log('view is now', view)
+
   const albums = bandcampURLs.map((e => {
     return e.text
   }))
-  console.log(albums)
+
   const findCurAlbum = () =>{
     for(let e of bandcampURLs){
       if(e.text === view){
@@ -66,11 +67,8 @@ export default function Listen() {
       }
     }
   }
-  let curAlbum = findCurAlbum();
-  console.log(curAlbum)
-  //function to find index of curAlbum based on vie
-    //find indexOf view in albums
-    //return Album with object passed in as props for render
+
+  let curAlbum = findCurAlbum();  
   
   return (
     <div className="Listen">
