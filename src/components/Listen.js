@@ -73,8 +73,8 @@ export default function Listen() {
   return (
     <div className="Listen">
       <div>Albums</div>
-      <Navbar albums={albums} setView={setView}/>
-      <Album curAlbum={curAlbum}/>
+      <Navbar albums={albums} setView={setView} />
+      <Album curAlbum={curAlbum} />
     </div>
   )
 }

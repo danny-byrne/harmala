@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-$navMargin: 10rem;
+$backGroundColor: grey;
+$navMargin: 7rem;
+$buttonMargin: 1rem;
+$mediaMinWidth: 480px;
 
 .App {
   text-align: center;
   font-family: 'Lora', serif;
   background-color: black;
   color: white;
+  background-color: $backGroundColor;
   width: 100vw;
   height: 100vh;
 }
@@ -14,37 +18,62 @@ $navMargin: 10rem;
 
 #Nav {
   display: block;
-  background-color:grey;
+  position: relative;
+}
+
+.header {
   align-items: center;
-  text-align: center;
+  height: 10vh;
+  font-size: 8vh;
 }
 
 #content {
-  width: 100vw;
-  background-color: red;
-  display: inline-flex;
-  flex-direction: row;
+  display: block;
+  text-align: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
-h3 {
+.blurb {
+  margin: 1.2rem;
+  margin-top: 2rem;
+  display: inline-block;
+  width: 50vw;
+}
+
+.pictureBox {
+  width: 50vw;
+  height: 50vh;
+  border: solid black 1px;
+  display: inline-block;
+}
+
+.pageNav {
   display: inline-block;
   margin-left: $navMargin;
   margin-right: $navMargin;
+  cursor: pointer;
+  font-size: 1.5rem;  
 }
 
 .Listen {
   width: 100vw;
   height: 50vh;
-  background-color: green;
   display: block;
 }
 
-.AlbumNavButton{
-  border: 1px solid black;
-  background-color: red;
+.AlbumNavButton {
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 5px;
   margin: auto;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 10px;
   display: inline-block;
+}
+
+.AlbumView {
+  display: block;
+  align-items: center;
+  text-align: center;
+  position: "relative";
 }

@@ -1,23 +1,40 @@
-import React from 'react';
-import Listen from './components/Listen'    
-
+import React, { useState } from 'react';
+import Listen from './components/Listen';    
+import About from './components/About';
+import Connect from './components/Connect';
 import './App.scss';
 
 function App() {
+  const views = ['About', 'Listen', 'Connect'];
+  const [view, setView] = useState(views[0]);
+  const findCurView = () => {
+    switch(view){
+      case 'About':
+        return <About />
+      case 'Listen':
+        return <Listen />
+      case 'Connect':
+        return <Connect />
+      default:
+        return <About />;
+    };
+  }; 
+
+  const curView = findCurView();
+
   return (
     <div className="App">
-      <h1 className="Harmala">HARMALA</h1>
+      <div className="header">HARMALA</div>
       <div id="Nav">
-        <h3>About</h3>
-        <h3>Listen</h3>
-        <h3>Connect</h3>
+        {views.map((e)=> {
+           return <div key={e} className="pageNav" onClick={() => setView(e)}>{e}</div>
+        })}
       </div>
       <div id="content">
-        <Listen />
+        {curView}
       </div>
     </div>
   );
-}
+};
 
 export default App;
-
