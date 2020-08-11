@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react"
 
 export default function Connect() {
-  return (
-    <div style={{margin:'auto'}}>
-      Contact Form Coming soon
-    </div>
-  )
+  return <div style={{ margin: "auto" }}>Contact Form Coming soon</div>
 }

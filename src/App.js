@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-import Listen from './components/Listen';    
-import About from './components/About';
-import Connect from './components/Connect';
-import Footer from './components/Footer';
-import './App.scss';
+import React, { useState } from "react"
+import Listen from "./components/Listen"   
+import About from "./components/About"
+import Connect from "./components/Connect"
+import Footer from "./components/Footer"
+import "./App.scss"
 
 function App() {
-  const views = ['About', 'Listen', 'Connect'];
+  const views = ['About', 'Listen', 'Connect']
   const [view, setView] = useState(views[0]);
   const findCurView = () => {
     switch(view){
-      case 'About':
+      case "About":
         return <About />
-      case 'Listen':
+      case "Listen":
         return <Listen />
-      case 'Connect':
+      case "Connect":
         return <Connect />
       default:
-        return <About />;
-    };
-  }; 
+        return <About />
+    }
+  }
 
   const curView = findCurView();
 
@@ -38,7 +38,7 @@ function App() {
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

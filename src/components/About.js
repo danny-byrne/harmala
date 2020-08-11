@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const blurb = `Harmala is a music project created by Danny Byrne.  In 2015, Danny attended his first Ayahuasca ceremony.  
 It changed his life, he became involved with the medicine community in Southern California.
@@ -13,12 +13,8 @@ Danny has been guardianing and facilitating with plant medicines for five years.
 export default function About() {
   return (
     <>
-    <div className='blurb'>
-      {blurb}
-    </div>
-    <div className='pictureBox'>
-
-    </div>
+      <div className="blurb">{blurb}</div>
+      <div className="pictureBox" />
     </>
   )
 }
