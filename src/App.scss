@@ -77,3 +77,17 @@ $mediaMinWidth: 480px;
   text-align: center;
   position: "relative";
 }
+
+.footer {
+  display: block;
+  height: 5vh;
+  // background-color: pink;
+}
+
+.socialIcon {
+  height: 42px;
+  width: 42px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+}

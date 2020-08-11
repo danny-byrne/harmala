@@ -6,7 +6,7 @@ He immediately saw how the music that accompanies a plant medicine journey could
 Traditionally, shamans use their voice, whistles, shakers, and bundles of plants to perform healings.  Since Ayahuasca has spread beyond the Amazon in recent decades, 
 ceremony music has becomes more of a world music affair.
 
-Danny is a Berklee College of Music graduate, has produced many projects, and immediately saw mixed ambient guitar and synth atmospheres helped people along in the journey process.  
+Danny is a Berklee College of Music graduate and immediately saw mixed ambient guitar and synth atmospheres helped people along in the journey process.  
 He is influenced by Mogwai, Robert Rich, Brian Eno, Andrew Lahiff, Rudy Adrian, Aphex Twin, Vangelis, Radiohead and many others. 
 Danny has been guardianing and facilitating with plant medicines for five years.`
 

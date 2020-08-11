@@ -35,19 +35,12 @@ const bandcampURLs = [
   }  
 ]
 
-function Button(props){
-  return (
-    <>
-      <div key={props.title} className="AlbumNavButton" onClick={() => props.setView(props.title)}>{props.title}</div>
-    </>
-  )
-}
-
 function Navbar(props){
   return (
     <>
+    Albums:
       {props.albums.map((title) => {
-        return <Button title={title} setView={props.setView} />
+        return  <div key={title} className="AlbumNavButton" onClick={() => props.setView(title)}>{title}</div>
       })}
     </>
   )
@@ -72,7 +65,7 @@ export default function Listen() {
   
   return (
     <div className="Listen">
-      <div>Albums</div>
+      {/* <div>Albums</div> */}
       <Navbar albums={albums} setView={setView} />
       <Album curAlbum={curAlbum} />
     </div>

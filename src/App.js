@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Listen from './components/Listen';    
 import About from './components/About';
 import Connect from './components/Connect';
+import Footer from './components/Footer';
 import './App.scss';
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
       </div>
       <div id="content">
         {curView}
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
