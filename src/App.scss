@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
 $backGroundColor: grey;
 $navMargin: 7rem;
@@ -7,14 +7,13 @@ $mediaMinWidth: 480px;
 
 .App {
   text-align: center;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   background-color: black;
   color: white;
   background-color: $backGroundColor;
   width: 100vw;
   height: 100vh;
 }
-
 
 #Nav {
   display: block;
@@ -28,10 +27,12 @@ $mediaMinWidth: 480px;
 }
 
 #content {
+  height: 80vh;
   display: block;
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
+  // background-color: red;
 }
 
 .blurb {
@@ -53,7 +54,7 @@ $mediaMinWidth: 480px;
   margin-left: $navMargin;
   margin-right: $navMargin;
   cursor: pointer;
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
 }
 
 .Listen {
@@ -79,9 +80,14 @@ $mediaMinWidth: 480px;
 }
 
 .footer {
-  display: block;
+  display: flex;
   height: 5vh;
-  // background-color: pink;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 35%;
+  }
 }
 
 .socialIcon {
@@ -90,4 +96,59 @@ $mediaMinWidth: 480px;
   margin-left: 5px;
   margin-right: 5px;
   display: inline-block;
+}
+
+$fade: 2000ms;
+
+.fade-in {
+  animation: fadeIn ease $fade;
+  -webkit-animation: fadeIn ease $fade;
+  -moz-animation: fadeIn ease $fade;
+  -o-animation: fadeIn ease $fade;
+  -ms-animation: fadeIn ease $fade;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

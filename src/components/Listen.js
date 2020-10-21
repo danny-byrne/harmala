@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import Album from "./Album"
+import React, { useState } from "react";
+import Album from "./Album";
 
 const bandcampURLs = [
   {
@@ -32,41 +32,49 @@ const bandcampURLs = [
     id: 4290124329,
     text: "Improvisations V",
   },
-]
+];
 
-function Navbar(props){
-  const { albums } = props
+function Navbar(props) {
+  const { albums } = props;
   return (
     <>
       Albums:
       {albums.map((title) => {
-        return <div key={title} className="AlbumNavButton" onClick={() => props.setView(title)}>{title}</div>
+        return (
+          <div
+            key={title}
+            className="AlbumNavButton  fade-in"
+            onClick={() => props.setView(title)}
+          >
+            {title}
+          </div>
+        );
       })}
     </>
-  )
+  );
 }
 
 export default function Listen() {
-  const [view, setView] = useState(bandcampURLs[0].text)
+  const [view, setView] = useState(bandcampURLs[0].text);
 
   const albums = bandcampURLs.map((e) => {
-    return e.text
-  })
+    return e.text;
+  });
 
   const findCurAlbum = () => {
     for (let e of bandcampURLs) {
       if (e.text === view) {
-        return e
+        return e;
       }
     }
-  }
+  };
 
-  const curAlbum = findCurAlbum()
+  const curAlbum = findCurAlbum();
 
   return (
-    <div className="Listen">
+    <div className="Listen fade-in">
       <Navbar albums={albums} setView={setView} />
       <Album curAlbum={curAlbum} />
     </div>
-  )
+  );
 }
