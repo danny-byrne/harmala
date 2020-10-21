@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
-$backGroundColor: grey;
+$backGroundColor: rgb(10, 0, 97);
 $navMargin: 7rem;
 $buttonMargin: 1rem;
 $mediaMinWidth: 480px;
@@ -77,6 +77,13 @@ $mediaMinWidth: 480px;
   align-items: center;
   text-align: center;
   position: "relative";
+}
+
+.Album {
+  border: 0;
+  width: 350px;
+  height: 470px;
+  display: inline-block;
 }
 
 .footer {

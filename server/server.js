@@ -4,16 +4,17 @@
  * sending from emailjs
  * https://sheelahb.com/blog/how-to-send-email-from-react-without-a-backend/
  */
-let express = require("express");
-let bodyParser = require("body-parser");
-let cors = require("cors"),
-  path = require("path");
-let port = process.env.PORT || 3000;
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const path = require("path");
+const port = process.env.PORT || 3000;
 
 require("dotenv").config();
 
-let directory = process.env.NODE_ENV === "development" ? "public" : "build",
-  publicPath = path.join(__dirname, "..", directory);
+const directory = process.env.NODE_ENV === "development" ? "public" : "build";
+
+const publicPath = path.join(__dirname, "..", directory);
 
 const app = express();
 
