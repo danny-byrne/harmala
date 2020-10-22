@@ -5,8 +5,6 @@ import bandcampURLs from "../constants";
 
 export default function Listen() {
   const [view, setView] = useState(bandcampURLs[0].text);
-  console.log(bandcampURLs[0]);
-  console.log(view);
 
   const albums = bandcampURLs.map((e) => {
     return e.text;
@@ -17,11 +15,8 @@ export default function Listen() {
   });
 
   const changeView = (view) => {
-    console.log("changing view", view);
     setView(view);
   };
-
-  console.log(curAlbum);
 
   return (
     <div className="Listen fade-in">
