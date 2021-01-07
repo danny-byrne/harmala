@@ -16,15 +16,13 @@ export default function Footer() {
   return (
     <>
       <footer className="footer">
-        <div className="footer container">
-          {urls.map((e) => {
-            return (
-              <div key={e} className="socialIcon">
-                <SocialIcon fgColor="#FFFFFF" style={style} url={e} />
-              </div>
-            );
-          })}
-        </div>
+        {urls.map((e) => {
+          return (
+            <div key={e} className="socialIcon">
+              <SocialIcon fgColor="#FFFFFF" style={style} url={e} />
+            </div>
+          );
+        })}
       </footer>
     </>
   );

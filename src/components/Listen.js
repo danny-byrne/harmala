@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import Album from "./Album";
 
 import bandcampURLs from "../constants";
