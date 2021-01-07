@@ -5,16 +5,22 @@ import Connect from "./components/Connect";
 import Footer from "./components/Footer";
 import "./App.scss";
 
+const views = {
+  about: "About",
+  listen: "Listen",
+  connect: "Connect",
+};
+
 function App() {
-  const views = ["About", "Listen", "Connect"];
   const [view, setView] = useState(views[0]);
+
   const findCurView = () => {
     switch (view) {
-      case "About":
+      case views.about:
         return <About />;
-      case "Listen":
+      case views.listen:
         return <Listen />;
-      case "Connect":
+      case views.connect:
         return <Connect />;
       default:
         return <About />;
@@ -25,9 +31,9 @@ function App() {
 
   return (
     <div className="App fade-in">
-      <div className="header">HARMALA</div>
+      <header id="header">HARMALA</header>
       <div id="Nav">
-        {views.map((e) => {
+        {Object.values(views).map((e) => {
           return (
             <div key={e} className="pageNav" onClick={() => setView(e)}>
               {e}

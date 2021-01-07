@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
-$backGroundColor: rgb(10, 0, 97);
+$backGroundColor: rgb(101, 93, 182);
 $navMargin: 7rem;
 $buttonMargin: 1rem;
-$mediaMinWidth: 480px;
+$mediaMinWidth: 600px;
 
 .App {
   text-align: center;
@@ -15,15 +15,26 @@ $mediaMinWidth: 480px;
   height: 100vh;
 }
 
-#Nav {
-  display: block;
-  position: relative;
-}
-
-.header {
+#header {
   align-items: center;
   height: 10vh;
   font-size: 8vh;
+}
+
+#Nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 5vh;
+  position: relative;
+  font-size: 1.5em;
+}
+
+.pageNav {
+  margin-left: $navMargin;
+  margin-right: $navMargin;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 #content {
@@ -32,14 +43,14 @@ $mediaMinWidth: 480px;
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
-  // background-color: red;
 }
 
 .blurb {
+  font-size: 1.3em;
   margin: 1.2rem;
   margin-top: 2rem;
-  display: inline-block;
-  width: 50vw;
+  display: inline;
+  width: 90vw;
 }
 
 .pictureBox {
@@ -49,18 +60,18 @@ $mediaMinWidth: 480px;
   display: inline-block;
 }
 
-.pageNav {
-  display: inline-block;
-  margin-left: $navMargin;
-  margin-right: $navMargin;
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
 .Listen {
   width: 100vw;
   height: 50vh;
   display: block;
+}
+
+@media (min-width: $mediaMinWidth) {
+  body {
+    background: green;
+  }
+  .blurb {
+  }
 }
 
 .AlbumNavButton {

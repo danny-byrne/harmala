@@ -15,7 +15,7 @@ export default function Footer() {
   ];
   return (
     <>
-      <div className="footer">
+      <footer className="footer">
         <div className="footer container">
           {urls.map((e) => {
             return (
@@ -25,7 +25,7 @@ export default function Footer() {
             );
           })}
         </div>
-      </div>
+      </footer>
     </>
   );
 }
