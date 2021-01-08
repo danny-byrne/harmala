@@ -21,10 +21,14 @@ function App() {
       case views.listen:
         return <Listen />;
       case views.connect:
-        return <Connect />;
+        return <Connect resetPage={resetPage} />;
       default:
         return <About />;
     }
+  };
+
+  const resetPage = () => {
+    setTimeout(setView(views.about), 500);
   };
 
   const curView = findCurView();

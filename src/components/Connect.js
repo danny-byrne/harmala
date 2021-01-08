@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs, { init } from "emailjs-com";
+init("user_TR8Aw1vrcoYUWeEnbr1xS");
 
 /**
  * eventually implement OATH as described in https://medium.com/@nickroach_50526/sending-emails-with-node-js-using-smtp-gmail-and-oauth2-316fe9c790a1
@@ -37,13 +38,14 @@ export default function Contact(props) {
     };
     emailjs
       .send(
-        "gmail",
+        process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         data,
         process.env.REACT_APP_USERID
       )
       .then(
         () => {
+          setButtonText("Sent!");
           resetForm();
           resetPage();
         },
@@ -55,7 +57,7 @@ export default function Contact(props) {
 
   const success = <h3>Contact Form Submitted!</h3>;
   const form = (
-    <div>
+    <>
       <form className="contact-form fade-in" onSubmit={(e) => formSubmit(e)}>
         <label className="label" htmlFor="name">
           Name
@@ -114,13 +116,12 @@ export default function Contact(props) {
           required
           value={message}
         />
-        <div>
-          <button type="submit" className="button">
-            {buttonText}
-          </button>
-        </div>
+
+        <button type="submit" className="button">
+          {buttonText}
+        </button>
       </form>
-    </div>
+    </>
   );
 
   const view = !sent ? form : success;
