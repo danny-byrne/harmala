@@ -27,30 +27,30 @@ export default function Contact(props) {
   };
 
   async function formSubmit(e) {
-    // e.preventDefault(e);
-    // setButtonText("...sending");
-    // const data = {
-    //   name,
-    //   email,
-    //   message,
-    //   subject,
-    // };
-    // emailjs
-    //   .send(
-    //     "gmail",
-    //     process.env.REACT_APP_TEMPLATE_ID,
-    //     data,
-    //     process.env.REACT_APP_USERID
-    //   )
-    //   .then(
-    //     () => {
-    //       resetForm();
-    //       resetPage();
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    e.preventDefault(e);
+    setButtonText("...sending");
+    const data = {
+      name,
+      email,
+      message,
+      subject,
+    };
+    emailjs
+      .send(
+        "gmail",
+        process.env.REACT_APP_TEMPLATE_ID,
+        data,
+        process.env.REACT_APP_USERID
+      )
+      .then(
+        () => {
+          resetForm();
+          resetPage();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   const success = <h3>Contact Form Submitted!</h3>;
