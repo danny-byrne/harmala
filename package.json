@@ -8,7 +8,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "emailjs": "^3.4.0",
+    "emailjs-com": "^2.6.4",
     "espress": "0.0.0",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
@@ -41,7 +41,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "@testing-library/react": "^9.5.0",
+    "babel-loader": "^8.2.2",
     "prettier": "^2.0.5"
   }
 }

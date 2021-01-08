@@ -12,7 +12,7 @@ const views = {
 };
 
 function App() {
-  const [view, setView] = useState(views[0]);
+  const [view, setView] = useState(views.about);
 
   const findCurView = () => {
     switch (view) {
