@@ -29,8 +29,8 @@ export default function Listen() {
 function Navbar(props) {
   const { albums } = props;
   return (
-    <>
-      Albums:
+    <div className="AlbumNav">
+      {/* Albums: */}
       {albums.map((title) => {
         return (
           <div
@@ -42,6 +42,6 @@ function Navbar(props) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
